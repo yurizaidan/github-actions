@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exploring GitHub Actions </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container"> 
+    <div class="rg_rose"> 
+        <h1> Hello, world!</h1>
+        <h2> Explorando GitHub <b>Actions</b> </h2>
+    </div>
+
+    <div class="rg_grey"> 
+        <h3> Esta página foi desenvolvida por Yuri Zaidan <br> para a disciplina de<b> Gerenciamento e Configuração de Software</b> (2023/2), <br> que é ministrada pelo docente Michael Móra no curso de Engenharia de Software da PUC-RS. </h3>
+
+    </div>
+
+    <div class="rg_white"> 
+        <h4> <font size="5"> O que é o GitHub Actions? </font><br><br> O <b>GitHub Actions</b> é uma funcionalidade que permite construir automações no fluxo de trabalho de aplicações <br> geridas pelo GitHub, fazendo com que o processo de integração, desenvolvimento e implantação de um software <br>possa ocorrer de ponta a ponta, dentro do ambiente da ferramenta. <br> <br> De forma sumária, a automação proposta pelo GitHub Actions consiste em um conjunto de tarefas sequenciais <br> que são condicionadas a eventos pré-definidos em um determinado repositório, codificados através de um arquivo <br> do tipo <em> YAML (yet another markup language)</em>. <br> <br> De forma geral, essas tarefas podem ser a execução de um script ou de um teste, envio de notificações, ou até a <br> implantação de  uma nova versão de um software em um ambiente produtivo.  </h4>
+
+    </div>
+
+    <div class="rg_gray"> 
+        <h4> <font size="5"> Entendendo o conceito e aplicação de um workflow </font><br><br> <b> Workflows </b> são estruturas de comandos utilizadas para encadear ações baseadas em <b>eventos-chaves</b> ou <b>calendários</b>.<br> Estas instruções são armazenadas em um arquivo do tipo YAML, que deverá ser armazenado no diretório <em>'.github/workflows' </em>. <br><br> Na prática, cada workflow possui um ou mais <em>jobs</em>, e cada job, consiste em um ou mais <em> steps</em>, pensados para a atender<br>a um caso de uso específico - por exemplo, fazer o <em>deploy</em> de um script para um servidor. Vale lembrar que um step pode <br>também ser uma <em>action</em> disponibilizada pela comunidade do GitHub ou terceiros.<br><br> Durante a criação de um workflow, é necessário que se defina um evento-chave ou calendário que, uma vez registrado, <br>  inicialize a execução do workflow, como por exemplo, quando um <em>commit</em> é realizado em uma <em>branch</em> específica, ou até <br> através de um horário específico que foi determinado.  Além de tudo isso, o GitHub permite que o gerenciamento dos <br> workflows seja feito de forma rápida e intuitiva através de um editor visual para criar workflows, e também uma API para <br> integração com outros serviços e ferramentas.   </h4>
+    </div>
+
+
+    <div class="rg_white"> 
+        <h4> <font size="5"> Quais os benefícios do GitHub Actions? </font><br><br> Simplificação para criar e gerir workflows<br><br>Integração nativa com o próprio GitHub<br><br>Biblioteca extensa de ações criadas pela comunidade<br><br>Suporte à diferentes plataformas e linguagens<br><br>Segurança e confiabilidade de um recurso do GitHub</h4>
+
+    </div>   
+
+    <div class="rg_gray"> 
+        <h4> <font size="5"> Quais são os principais casos de uso para a utilização do GitHub Actions?</font><br><br><em>Pensado para CI/CD:</em> é possível se beneficiar dos workflows para construir e testar software automaticamente, além<br> de fazer o deploy deste código para ambientes de staging e produção.<br><br><em>Testes: </em>uma forma de garantir que o teste é executado sempre antes de ser mesclado à branch principal é condicionar <br> este evento a um fluxo de testes. <br><br><em>Notificações:</em> através da dinâmica entre workflows e eventos-chaves, é possível notificar um time que eventos, como a <br> falha de um teste, de forma programada e escalável.  </h4>
+    </div>
+
+    <div class="rg_white"> 
+        <h4> <font size="5"> Um exemplo prático com o GitHub Actions </font><br><br></h4>
+
+    </div>
+
+    <div class="rg_blue"> 
+        <h5> E-mail institucional:<em><br> y.zaidan@edu.pucrs.br</em><br><br></h5>
+
+    <div>
+
+</div>
+</body>
+</html>

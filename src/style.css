@@ -1,0 +1,96 @@
+/* style.css */
+body{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    display: grid;
+    text-align: center;
+
+
+}
+.rg_blue{
+    font-family: 'Ubuntu', sans-serif;
+    color:rgb(255, 255, 255);
+    height: 15vh;
+    width: 100%;
+    background: linear-gradient(180deg, #306ea4, #3b1676);
+}
+.rg_rose {
+    font-family: 'Ubuntu', sans-serif;
+    color:rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #d2001a, #7462ff);
+    line-height: 100%;
+
+}
+
+.rg_grey {
+    height: 35vh;
+    width: 100%;
+    background: linear-gradient(30deg, #fafcfc, #f9f8f8);
+}
+
+.rg_gray {
+    height: 85vh;
+    width: 100%;
+    background: linear-gradient(30deg, #fafcfc, #f9f8f8);
+}
+
+.rg_white{
+    height: 85vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+h1{
+    font-size: 70px;
+    font-weight: 700;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+h2{
+    font-size: 30px;
+    font-weight: lighter;
+    font-style: normal;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);   
+}
+
+h3{
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: normal;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    line-height: 200%;
+    
+}
+
+h4{
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: normal;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 200%;
+    text-align: justify;
+    left: 20%;
+}
+
+h5{
+    font-size: 12px;
+    font-weight: lighter;
+    font-style: normal;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    line-height: 200%;    
+}
