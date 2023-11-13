@@ -1,22 +1,22 @@
 name: YuriZaidan.com CI
 on: 
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout from repo
-              uses: actions/checkout@v1
-            - name: Deploy to host
-              uses: easingthemes/ssh-deploy@main
-              env: 
-                SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY}}
-                ARGS: "-rltgoDzvO --delete"
-                SOURCE: "/src"
-                REMOTE_HOST: ${{ secrets.REMOTE_HOST}}
-                REMOTE_USER: ${{ secrets.REMOTE_USER}}
-                REMOTE_PORT: ${{ secrets.REMOTE_PORT}}
-                TARGET: ${{ secrets.REMOTE_TARGET}}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out from repo
+        uses: actions/checkout@v1
+      - name: Deploying to hostinger
+        uses: easingthemes/ssh-deploy@main
+        env: 
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY}}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "src/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
