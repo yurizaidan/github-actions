@@ -38,11 +38,32 @@
     </div>   
 
     <div class="rg_gray"> 
-        <h4> <font size="5"> Quais são os principais casos de uso para a utilização do GitHub Actions?</font><br><br><em>Pensado para CI/CD:</em> é possível se beneficiar dos workflows para construir e testar software automaticamente, além<br> de fazer o deploy deste código para ambientes de staging e produção.<br><br><em>Testes: </em>uma forma de garantir que o teste é executado sempre antes de ser mesclado à branch principal é condicionar <br> este evento a um fluxo de testes. <br><br><em>Notificações:</em> através da dinâmica entre workflows e eventos-chaves, é possível notificar um time que eventos, como a <br> falha de um teste, de forma programada e escalável.  </h4>
+        <h4> <font size="5"> Quais são os principais casos de uso para a utilização do GitHub Actions?</font><br><br><em><b>Pensado para CI/CD: </b></em> é possível se beneficiar dos workflows para construir e testar software automaticamente, além<br> de fazer o deploy deste código para ambientes de staging e produção.<br><br><em><b>Testes: </b></em>uma forma de garantir que o teste é executado sempre antes de ser mesclado à branch principal é condicionar <br> este evento a um fluxo de testes. <br><br><em><b>Notificações: </b></em> através da dinâmica entre workflows e eventos-chaves, é possível notificar um time que eventos, como a <br> falha de um teste, de forma programada e escalável.  </h4>
     </div>
 
-    <div class="rg_white"> 
-        <h4> <font size="5"> Um exemplo prático com o GitHub Actions </font><br><br></h4>
+    <div class="rg_white_2"> 
+            <div class="image-container"> 
+                <figure>
+                    <img class="img" style="border-radius: 1dvh" src="img/workflow-yml.png" alt="yml workflow">
+                    <figcapti on style="font-style: italic; color: gray;">Workflow criado para realizar o deploy desta página para o webhost. </figcaption>
+                </figure>
+
+            </div>
+
+
+    </div>
+
+    <div class="rg_gray_2"> 
+        <h4> <font size="5"> Um exemplo prático com o GitHub Actions </font><br><br>
+            <em>Um exemplo de aplicação prática do GitHub Actions é a possibilidade de condicionar o processo de deploy de uma <br> aplicação web para um webhost à um evento de push para a branch main do projeto.</em> <br><br>Desta forma, quando todos os membros da equipe entendem que uma funcionalidade ou mais podem ser elevadas<br> à <em> general availability </em>, e realizam o push para a branch principal, é possível relacionar este evento a uma sequência de <br> ações que irão publicar a versão mais recente desta aplicação em sua respectiva hospedagem web.<br><br>  
+
+            Na imagem acima, é possível perceber que esta página possui um folder chamado <em>src</em>, onde estão armazenados a<br> página <em>index.html</em> e o arquivo de estilização <em>style.css</em>. Além dele, um sub-folder chamado <em>workflow</em> (dentro do folder<br> .github) possui um arquivo <em>ci.yml</em>, que será utilizado para compor a estrutura do workflow desta aplicação.<br><br>  
+            
+            A primeira parte do arquivo do workflow definirá o evento-chave que será utilizado como gatilho para a execução<br> dos jobs que serão inseridos a seguir. No caso deste exemplo, é definido que os jobs serão executados quando ocorrer<br>uma ação de push para a branch main.<br><br>  
+            
+            Após a definição do evento chave, é iniciado a descrição dos jobs e steps planejados para a automação esperada. <br>Inicialmente, é definido que o job será inicializado em uma <em>máquina linux</em>, e o seu primeiro passo será operacionalizar<br> o <em>checkout</em> do repositório da aplicação, através da action <em>actions/checkoutv@1</em> . Após esta ação, o próximo passo é<br> realizar o deploy com a versão mais recente da aplicada (enviada para a branch main) para o servidor de hospedagem<br> (neste caso, a <em>hostinger</em>). Para este exemplo, foi utilizado um modo de acesso ao servidor web por meio de<br> <em>chaves SSH</em>, com a action <em>easingthemes/ssh-deploy@main</em>.<br><br> Para que este acesso SSL ao servidor web possa ser autenticado, alguns parâmetros precisam ser adicionados nesta etapa:<br><br> 1. <b>'SSH_PRIVATEHEY'</b>:  chave privada SSH;<br>2. <b>'SOURCE'</b>: diretório com arquivos a serem transferidos para o servidor web;<br> 3.<b>'REMOTE_HOST'</b> : endereço de IP do servidor web;<br>4. <b>'REMOTE_USER'</b>: nome do usuário do servidor web;<br>5. <b>REMOTE_PORT'</b>: porta do servidor,<br>6.<b>'TARGET'</b>: diretório destino para onde serão transferidos os arquivos.<br><br>  
+
+            Vale lembrar que com exceção do valor referente ao parâmetro <em>source</em>, os demais precisam ser adicionados ao GitHub,<br> através da funcionalidade <em> Secrets</em>, dentro da aba Actions. E por fim, a chave pública SSH também precisa ser adicionada<br> no servidor web utilizado para aplicação, já que as chaves  SSH funcionam no modo chave pública e chave privada (sempre<br> em pares), onde a conexão SFTP/SSH só é autorizada se a chave privada do usuário do computador cliente bater com a<br> chave pública do usuário do servidor.  </h4>
 
     </div>
 
